@@ -1,0 +1,920 @@
+/* ==========================================================================
+   Website Portofolio & Sejarah JKT48
+   File    : css/style.css
+   Isi     : Semua pengaturan tampilan website ada di file ini.
+   Catatan : Website ini tidak memakai JavaScript sama sekali.
+             Bootstrap hanya dipakai untuk CSS-nya (grid, tombol, kartu, badge).
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. VARIABEL WARNA
+   Ingin ganti tema? Cukup ubah angka warna di bagian ini saja.
+   -------------------------------------------------------------------------- */
+:root {
+  --merah-jkt:    #e60012;   /* warna khas JKT48 */
+  --merah-gelap:  #a8000d;
+  --merah-muda:   #ff6b81;
+  --pink-lembut:  #ffe8ec;
+  --hitam:        #14161a;
+  --abu-gelap:    #1e2128;
+  --abu:          #6b7280;
+  --abu-terang:   #f5f6fa;
+  --putih:        #ffffff;
+  --emas:         #f2b705;
+
+  --radius:       16px;
+  --radius-kecil: 10px;
+  --radius-penuh: 999px;
+
+  --bayangan:       0 10px 30px rgba(20, 22, 26, .08);
+  --bayangan-besar: 0 18px 50px rgba(20, 22, 26, .18);
+
+  --transisi: .25s ease;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. DASAR HALAMAN
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;   /* supaya klik menu meluncur halus */
+  scroll-padding-top: 90px;  /* supaya judul tidak tertutup navbar */
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--hitam);
+  background-color: var(--putih);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transisi);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Warna teks bantuan */
+.teks-merah   { color: var(--merah-jkt); }
+.teks-abu     { color: var(--abu); }
+.teks-putih   { color: var(--putih); }
+
+
+/* --------------------------------------------------------------------------
+   3. NAVBAR (tanpa tombol hamburger, jadi tidak butuh JavaScript)
+   -------------------------------------------------------------------------- */
+.jkt-navbar {
+  background-color: rgba(20, 22, 26, .96);
+  border-bottom: 3px solid var(--merah-jkt);
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+
+.jkt-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--putih);
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.jkt-navbar .brand-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-kecil);
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  color: var(--putih);
+  font-weight: 800;
+  font-size: .95rem;
+}
+
+.jkt-navbar .brand-kecil {
+  display: block;
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--merah-muda);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Menu utama: selalu mendatar dan otomatis turun baris di layar kecil */
+.jkt-navbar .nav-menu {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .15rem;
+}
+
+.jkt-navbar .nav-menu .nav-link {
+  color: rgba(255, 255, 255, .82);
+  font-size: .92rem;
+  font-weight: 600;
+  padding: .45rem .85rem;
+  border-radius: var(--radius-penuh);
+}
+
+.jkt-navbar .nav-menu .nav-link:hover,
+.jkt-navbar .nav-menu .nav-link:focus {
+  color: var(--putih);
+  background-color: rgba(230, 0, 18, .35);
+}
+
+.jkt-navbar .nav-menu .nav-link.aktif {
+  color: var(--putih);
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+}
+
+
+/* --------------------------------------------------------------------------
+   4. HERO / BANNER BESAR
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  color: var(--putih);
+  padding: 7rem 0 5.5rem;
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .93), rgba(168, 0, 13, .82)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20red%20and%20white%20concert%20stage%20lights%2C%20glowing%20bokeh%2C%20spotlight%20beams%2C%20idol%20stage%20atmosphere%2C%20no%20people%2C%20no%20text%2C%20wide%20cinematic%20banner&image_size=landscape_16_9");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, .88);
+  max-width: 640px;
+  font-size: 1.03rem;
+}
+
+/* Label kecil di atas judul */
+.label-kecil {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background-color: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .25);
+  color: var(--putih);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  padding: .35rem 1rem;
+  border-radius: var(--radius-penuh);
+}
+
+/* Kotak statistik di bawah hero */
+.kotak-statistik {
+  background-color: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: var(--radius);
+  padding: 1.1rem .6rem;
+  text-align: center;
+  height: 100%;
+}
+
+.kotak-statistik .angka {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--putih);
+  line-height: 1.2;
+}
+
+.kotak-statistik .keterangan {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, .75);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. BANNER KECIL UNTUK HALAMAN SELAIN BERANDA
+   -------------------------------------------------------------------------- */
+.banner-halaman {
+  position: relative;
+  color: var(--putih);
+  padding: 5rem 0 3.5rem;
+  background-color: var(--abu-gelap);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-halaman h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+}
+
+.banner-halaman p {
+  color: rgba(255, 255, 255, .82);
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+/* Jalan pintas / breadcrumb sederhana */
+.jalan-pintas {
+  font-size: .82rem;
+  color: rgba(255, 255, 255, .7);
+}
+
+.jalan-pintas a { color: var(--merah-muda); }
+.jalan-pintas a:hover { color: var(--putih); }
+
+/* Gambar latar berbeda untuk tiap halaman */
+.banner-biodata {
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .94), rgba(168, 0, 13, .78)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20dark%20minimal%20desk%20with%20glowing%20red%20light%20lines%2C%20modern%20developer%20workspace%20atmosphere%2C%20no%20people%2C%20no%20text%2C%20wide%20banner&image_size=landscape_16_9");
+}
+
+.banner-sejarah {
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .94), rgba(168, 0, 13, .78)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20vintage%20red%20theater%20curtain%2C%20old%20stage%20with%20warm%20spotlight%2C%20nostalgic%20memory%20feeling%2C%20no%20people%2C%20no%20text%2C%20wide%20banner&image_size=landscape_16_9");
+}
+
+.banner-oshi {
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .93), rgba(230, 0, 18, .72)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20soft%20pink%20and%20red%20heart%20bokeh%20glow%2C%20dreamy%20fan%20light%20sticks%20in%20dark%2C%20no%20people%2C%20no%20text%2C%20wide%20banner&image_size=landscape_16_9");
+}
+
+.banner-project {
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .94), rgba(168, 0, 13, .78)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20web%20design%20wireframe%20mockup%20on%20screen%20with%20red%20accent%20light%2C%20modern%20ui%20concept%2C%20no%20people%2C%20no%20text%2C%20wide%20banner&image_size=landscape_16_9");
+}
+
+.banner-kontak {
+  background-image:
+    linear-gradient(135deg, rgba(20, 22, 26, .95), rgba(168, 0, 13, .8)),
+    url("https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20dark%20gradient%20background%20with%20glowing%20red%20network%20connection%20dots%2C%20communication%20concept%2C%20no%20people%2C%20no%20text%2C%20wide%20banner&image_size=landscape_16_9");
+}
+
+
+/* --------------------------------------------------------------------------
+   6. JUDUL BAGIAN (SECTION)
+   -------------------------------------------------------------------------- */
+.bagian { padding: 4.5rem 0; }
+.bagian-abu { background-color: var(--abu-terang); }
+
+.judul-bagian { margin-bottom: 2.8rem; }
+
+.judul-bagian .label-atas {
+  display: inline-block;
+  color: var(--merah-jkt);
+  background-color: var(--pink-lembut);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: .3rem .9rem;
+  border-radius: var(--radius-penuh);
+  margin-bottom: .9rem;
+}
+
+.judul-bagian h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: .7rem;
+}
+
+.judul-bagian p {
+  color: var(--abu);
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.judul-bagian.tengah { text-align: center; }
+.judul-bagian.tengah p { margin-left: auto; margin-right: auto; }
+
+
+/* --------------------------------------------------------------------------
+   7. KARTU UMUM
+   -------------------------------------------------------------------------- */
+.kartu {
+  background-color: var(--putih);
+  border: 1px solid #ecedf3;
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  height: 100%;
+  transition: var(--transisi);
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bayangan-besar);
+  border-color: rgba(230, 0, 18, .35);
+}
+
+.kartu-judul {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.kartu p { color: var(--abu); margin-bottom: 0; font-size: .94rem; }
+
+/* Lingkaran ikon di dalam kartu */
+.ikon-bulat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  color: var(--putih);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.ikon-bulat.emas { background: linear-gradient(135deg, #f2b705, #ffcf4d); }
+
+/* Garis pembatas dengan aksen merah */
+.garis-aksen {
+  width: 64px;
+  height: 4px;
+  border-radius: var(--radius-penuh);
+  background: linear-gradient(90deg, var(--merah-jkt), var(--merah-muda));
+  margin-bottom: 1.2rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. TIMELINE SEJARAH
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #ecedf3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.2rem;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+/* Titik pada garis timeline */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.62rem;
+  top: .45rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--putih);
+  border: 4px solid var(--merah-jkt);
+}
+
+.timeline-tahun {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--putih);
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  padding: .22rem .85rem;
+  border-radius: var(--radius-penuh);
+  margin-bottom: .6rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+}
+
+.timeline-item p {
+  color: var(--abu);
+  font-size: .94rem;
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. KARTU ERA JKT48
+   -------------------------------------------------------------------------- */
+.kartu-era {
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  height: 100%;
+  color: var(--putih);
+  border: none;
+  transition: var(--transisi);
+}
+
+.kartu-era:hover { transform: translateY(-5px); box-shadow: var(--bayangan-besar); }
+
+.kartu-era .periode {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.kartu-era h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: .35rem 0 .6rem;
+}
+
+.kartu-era p {
+  font-size: .92rem;
+  opacity: .95;
+  margin-bottom: 0;
+}
+
+.era-reboost { background: linear-gradient(135deg, #1f6feb, #4aa8ff); }
+.era-one     { background: linear-gradient(135deg, #6b21a8, #a855f7); }
+.era-newera  { background: linear-gradient(135deg, var(--merah-gelap), var(--merah-jkt)); }
+.era-fight   { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+
+
+/* --------------------------------------------------------------------------
+   10. KARTU OSHI (MEMBER FAVORIT)
+   -------------------------------------------------------------------------- */
+.kartu-oshi {
+  background-color: var(--putih);
+  border: 1px solid #ecedf3;
+  border-radius: var(--radius);
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  height: 100%;
+  transition: var(--transisi);
+}
+
+.kartu-oshi:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--bayangan-besar);
+  border-color: rgba(230, 0, 18, .4);
+}
+
+/* Avatar bulat berisi inisial nama */
+.avatar-oshi {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto .9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--putih);
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  border: 3px solid var(--pink-lembut);
+}
+
+.avatar-oshi.ungu   { background: linear-gradient(135deg, #6b21a8, #a855f7); }
+.avatar-oshi.biru   { background: linear-gradient(135deg, #1d4ed8, #38bdf8); }
+.avatar-oshi.hijau  { background: linear-gradient(135deg, #047857, #34d399); }
+.avatar-oshi.jingga { background: linear-gradient(135deg, #b45309, #fbbf24); }
+.avatar-oshi.abu    { background: linear-gradient(135deg, #374151, #9ca3af); }
+
+.kartu-oshi h3 {
+  font-size: 1.02rem;
+  font-weight: 800;
+  margin-bottom: .15rem;
+}
+
+.tim-oshi {
+  display: inline-block;
+  font-size: .73rem;
+  font-weight: 700;
+  color: var(--merah-gelap);
+  background-color: var(--pink-lembut);
+  padding: .15rem .7rem;
+  border-radius: var(--radius-penuh);
+  margin-bottom: .7rem;
+}
+
+.ucapan-oshi {
+  font-size: .86rem;
+  font-style: italic;
+  color: var(--abu);
+  margin-bottom: .9rem;
+}
+
+/* Barisan tombol media sosial member */
+.sosial-oshi {
+  display: flex;
+  justify-content: center;
+  gap: .45rem;
+}
+
+.sosial-oshi a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--abu-terang);
+  color: var(--abu-gelap);
+  font-size: .95rem;
+}
+
+.sosial-oshi a:hover {
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  color: var(--putih);
+}
+
+
+/* --------------------------------------------------------------------------
+   11. LABEL / BADGE
+   -------------------------------------------------------------------------- */
+.label-kategori {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  padding: .25rem .75rem;
+  border-radius: var(--radius-penuh);
+  color: var(--putih);
+}
+
+.kategori-main    { background-color: var(--merah-jkt); }
+.kategori-regular { background-color: var(--abu-gelap); }
+.kategori-trainee { background-color: #1d4ed8; }
+.kategori-ex      { background-color: var(--abu); }
+.kategori-putih   { background-color: var(--putih); color: var(--merah-gelap); }
+
+.label-kecil-hitam {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background-color: var(--pink-lembut);
+  color: var(--merah-gelap);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  padding: .32rem .9rem;
+  border-radius: var(--radius-penuh);
+  margin-bottom: 1rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   12. DAFTAR BIODATA (label + nilai)
+   -------------------------------------------------------------------------- */
+.daftar-biodata { margin: 0; }
+
+.baris-biodata {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px dashed #e4e6f0;
+  font-size: .93rem;
+}
+
+.baris-biodata:last-child { border-bottom: none; }
+
+.baris-biodata .label {
+  color: var(--abu);
+  font-weight: 600;
+}
+
+.baris-biodata .nilai {
+  font-weight: 700;
+  text-align: right;
+  color: var(--hitam);
+}
+
+/* Daftar dengan tanda centang */
+.daftar-centang {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.daftar-centang li {
+  position: relative;
+  padding-left: 1.9rem;
+  margin-bottom: .6rem;
+  font-size: .94rem;
+}
+
+.daftar-centang li::before {
+  content: "\F26E";           /* kode ikon centang Bootstrap Icons */
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--merah-jkt);
+  font-weight: 700;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. KARTU PROJECT
+   -------------------------------------------------------------------------- */
+.kartu-project {
+  background-color: var(--putih);
+  border: 1px solid #ecedf3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transisi);
+}
+
+.kartu-project:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--bayangan-besar);
+}
+
+/* Bagian atas kartu project (pengganti gambar) */
+.kepala-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  color: var(--putih);
+  font-size: 2.6rem;
+  background: linear-gradient(135deg, var(--hitam), var(--merah-gelap));
+}
+
+.kepala-project.biru   { background: linear-gradient(135deg, #0b3d91, #2f80ed); }
+.kepala-project.ungu   { background: linear-gradient(135deg, #3b0764, #9333ea); }
+.kepala-project.hijau  { background: linear-gradient(135deg, #064e3b, #10b981); }
+.kepala-project.jingga { background: linear-gradient(135deg, #7c2d12, #f59e0b); }
+.kepala-project.pink   { background: linear-gradient(135deg, #831843, #ec4899); }
+
+.isi-project {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.isi-project h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: .55rem;
+}
+
+.isi-project p {
+  color: var(--abu);
+  font-size: .92rem;
+  flex-grow: 1;
+}
+
+/* Daftar teknologi di kartu project */
+.daftar-teknologi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-bottom: 1rem;
+}
+
+.daftar-teknologi span {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--merah-gelap);
+  background-color: var(--pink-lembut);
+  padding: .2rem .65rem;
+  border-radius: var(--radius-penuh);
+}
+
+
+/* --------------------------------------------------------------------------
+   14. TOMBOL
+   -------------------------------------------------------------------------- */
+.tombol {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  font-size: .92rem;
+  padding: .7rem 1.4rem;
+  border-radius: var(--radius-penuh);
+  border: 2px solid transparent;
+  transition: var(--transisi);
+}
+
+.tombol-merah {
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  color: var(--putih);
+}
+
+.tombol-merah:hover {
+  color: var(--putih);
+  box-shadow: 0 12px 26px rgba(230, 0, 18, .35);
+  transform: translateY(-2px);
+}
+
+.tombol-garis-putih {
+  border-color: rgba(255, 255, 255, .55);
+  color: var(--putih);
+}
+
+.tombol-garis-putih:hover {
+  background-color: var(--putih);
+  color: var(--merah-gelap);
+}
+
+.tombol-garis-hitam {
+  border-color: #e4e6f0;
+  color: var(--hitam);
+  background-color: var(--putih);
+}
+
+.tombol-garis-hitam:hover {
+  border-color: var(--merah-jkt);
+  color: var(--merah-jkt);
+}
+
+
+/* --------------------------------------------------------------------------
+   15. KOTAK AJAKAN (CALL TO ACTION)
+   -------------------------------------------------------------------------- */
+.kotak-ajakan {
+  background-image: linear-gradient(135deg, rgba(20, 22, 26, .95), rgba(168, 0, 13, .88));
+  color: var(--putih);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.kotak-ajakan h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.kotak-ajakan p {
+  color: rgba(255, 255, 255, .85);
+  max-width: 620px;
+  margin: 0 auto 1.6rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   16. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: var(--hitam);
+  color: rgba(255, 255, 255, .72);
+  padding-top: 3.5rem;
+  font-size: .92rem;
+  border-top: 4px solid var(--merah-jkt);
+}
+
+.footer h4 {
+  color: var(--putih);
+  font-size: .95rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer a { color: rgba(255, 255, 255, .72); }
+.footer a:hover { color: var(--merah-muda); }
+
+.footer .daftar-footer {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer .daftar-footer li { margin-bottom: .5rem; }
+
+.footer .garis-footer {
+  border-color: rgba(255, 255, 255, .12);
+  margin: 2.5rem 0 1.2rem;
+}
+
+.footer .hak-cipta {
+  font-size: .84rem;
+  color: rgba(255, 255, 255, .55);
+  margin-bottom: 0;
+}
+
+.footer .sosial-footer {
+  display: flex;
+  gap: .5rem;
+}
+
+.footer .sosial-footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .08);
+  color: var(--putih);
+}
+
+.footer .sosial-footer a:hover {
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+}
+
+
+/* --------------------------------------------------------------------------
+   17. TABEL SEDERHANA
+   -------------------------------------------------------------------------- */
+.tabel-rapi {
+  background-color: var(--putih);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: .92rem;
+}
+
+.tabel-rapi thead {
+  background-color: var(--hitam);
+  color: var(--putih);
+}
+
+.tabel-rapi thead th {
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  border: none;
+  padding: .85rem 1rem;
+}
+
+.tabel-rapi tbody td {
+  padding: .8rem 1rem;
+  vertical-align: middle;
+  border-color: #eef0f6;
+}
+
+
+/* --------------------------------------------------------------------------
+   18. TOMBOL KEMBALI KE ATAS (hanya tautan biasa, tanpa JavaScript)
+   -------------------------------------------------------------------------- */
+.tombol-atas {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--merah-jkt), var(--merah-muda));
+  color: var(--putih);
+  font-size: 1.2rem;
+  box-shadow: var(--bayangan-besar);
+  z-index: 1030;
+}
+
+.tombol-atas:hover { color: var(--putih); transform: translateY(-3px); }
+
+
+/* --------------------------------------------------------------------------
+   19. PENGATURAN LAYAR KECIL (HP & TABLET)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .jkt-navbar .nav-menu {
+    justify-content: flex-start;
+    margin-top: .6rem;
+    width: 100%;
+  }
+
+  .hero { padding: 4.5rem 0 3.5rem; }
+  .bagian { padding: 3.2rem 0; }
+  .kotak-ajakan { padding: 2.2rem 1.2rem; }
+}
+
+@media (max-width: 575.98px) {
+  .jkt-navbar .nav-menu .nav-link {
+    font-size: .84rem;
+    padding: .35rem .6rem;
+  }
+
+  .baris-biodata {
+    flex-direction: column;
+    gap: .1rem;
+  }
+
+  .baris-biodata .nilai { text-align: left; }
+
+  .timeline { padding-left: 1.4rem; }
+  .timeline-item::before { left: -2.02rem; }
+}
