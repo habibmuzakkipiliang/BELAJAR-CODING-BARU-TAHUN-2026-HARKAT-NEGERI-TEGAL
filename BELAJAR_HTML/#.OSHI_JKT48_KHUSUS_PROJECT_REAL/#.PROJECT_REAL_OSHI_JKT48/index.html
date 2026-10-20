@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- ============================================
+         PETUNJUK MODIFIKASI CEPAT UNTUK PEMULA:
+         1. Ganti teks nama/biodata di bagian BERANDA (Hero)
+         2. Ganti gambar profil di bagian Hero <img src="...">
+         3. Ubah data oshi JKT48 di array card (bagian SECTION OSHI)
+         4. Ganti URL project showcase di bagian PROJECT UTAMA
+         5. Edit footer copyright di paling bawah
+         ============================================ -->
+
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=0bf1d2c9-18d6-4073-a6e3-ca2f56d31cad
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=0bf1d2c9-18d6-4073-a6e3-ca2f56d31cad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habib Muzakki Piliang | Portofolio Front-End JKT48 Wota, Fans, Oshi</title>
+
+
+    <!-- Deskripsi optimal antara 140-160 karakter untuk CTR tinggi -->
+    <meta name="description" content="Portofolio Habib Muzakki Piliang, Mahasiswa D4 Vokasi Teknik Informatika Universitas Harkat Negeri Tegal. Front-End Developer, Bug Hunter, dan Fans JKT48 Kota Serang.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Habib Muzakki Piliang">
+    <link rel="canonical" href="https://website-portofolio-fans-jkt48.netlify.app/">
+
+
+    <!-- 3. PROTOKOL OPEN GRAPH (Optimalisasi Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Habib Muzakki Piliang | Portofolio Front-End Developer & Fans JKT48">
+    <meta property="og:description" content="Kenali Habib Muzakki Piliang, Mahasiswa D4 Teknik Informatika, Junior Bug Hunter OWASP ZAP, dan Koleksi Oshi JKT48 Terlengkap.">
+    <meta property="og:url" content="https://website-portofolio-fans-jkt48.netlify.app/">
+    <meta property="og:site_name" content="Habib Portofolio">
+    <meta property="og:image" content="https://raw.githubusercontent.com/habibmuzakkipiliang/HM_Initial_Profile_Github/refs/heads/main/HM_Profile_Github.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="profile:first_name" content="Habib">
+    <meta property="profile:last_name" content="Muzakki Piliang">
+    <meta property="profile:username" content="habibmuzakki">
+
+
+    <!-- 4. PROTOKOL TWITTER CARDS (X Browser) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Habib Muzakki Piliang | Portofolio Front-End Developer">
+    <meta name="twitter:description" content="Mahasiswa D4 Vokasi Teknik Informatika & Fans JKT48 sejati dari Kota Serang, Banten.">
+    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5603AQF9xFApaVTIcw/profile-displayphoto-shrink_800_800/B56ZdCxZpLH8Ac-/0/1749171936737?e=1788393600&v=beta&t=eq-z4dPGJNL9MMo2MXNmSNvqk-fv4Y9O6n6oc8OUvNs">
+
+
+    <!-- 5. PENYEMBUNYIAN INTEGRASI DAN FORMAT LOGIS -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#e20613">
+
+
+    <!--VERIFIKASI GOOGLE WEB MASTER-->
+    <meta name="google-site-verification" content="1igJW0xRDO03V1bi0CTt_LbWXbBQLReZbAC-uNCZRRI" />
+
+
+    <!-- Bootstrap 5.3 CSS CDN (TIDAK BOLEH ADA JS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts untuk tampilan modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- =====================================================
+         CSS VARIABEL & THEME TOGGLE (MURNI CSS, TANPA JS!)
+         :root = Light Mode default
+         #theme-toggle:checked ~ = Dark Mode ketika checkbox ON
+         ===================================================== -->
+
+    <link rel="stylesheet" href="style_css_1.css">
+</head>
+
+<!-- =======================================================
+     BODY: Checkbox theme-toggle DIPASANG DI ATAS SEMUA
+     Supaya ~ sibling selector bisa mengontrol SEMUA elemen
+     ======================================================= -->
+<body>
+    <!-- PETUNJUK: Checkbox INI yang mengontrol Dark/Light Mode (klik ikon matahari/bulan) -->
+    <input type="checkbox" id="theme-toggle">
+
+    <!-- ===== 1. NAVBAR (Menu Navigasi) ===== -->
+    <!-- PETUNJUK: Ubah nama/logo/menu navigasi di bagian ini -->
+    <nav class="navbar-custom">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-3">
+                <!-- Kiri: Logo HM + Judul -->
+                <a href="#beranda" class="d-flex align-items-center gap-3 text-decoration-none">
+                    <!-- Logo HM Gradient -->
+                    <div class="logo-hm">HM</div>
+                    <!-- Judul Navbar -->
+                    <span class="nav-title d-none d-sm-inline">Habib Portofolio</span>
+                </a>
+
+                <!-- Tengah: Menu Navigasi (Desktop) -->
+                <div class="d-none d-lg-flex align-items-center gap-1">
+                    <a href="#beranda" class="nav-link-custom">Beranda</a>
+                    <a href="#biodata" class="nav-link-custom">Biodata</a>
+                    <a href="#oshi" class="nav-link-custom">Oshi JKT48</a>
+                    <a href="#project" class="nav-link-custom">Project</a>
+                </div>
+
+                <!-- Kanan: Tombol Toggle Tema -->
+                <!-- PETUNJUK: Klik tombol ini untuk ganti Dark/Light Mode -->
+                <label for="theme-toggle" class="theme-label" title="Ganti Tema">
+                    <!-- Ikon Matahari (Light Mode) -->
+                    <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .38-.39.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .38-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.38 1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.38 1.03.39 1.41 0l1.06-1.06z"/></svg>
+                    <!-- Ikon Bulan (Dark Mode) -->
+                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+                </label>
+            </div>
+
+            <!-- Menu Navigasi Mobile (tampil di bawah) -->
+            <div class="d-flex d-lg-none align-items-center justify-content-center gap-1 pb-3 flex-wrap">
+                <a href="#beranda" class="nav-link-custom">Beranda</a>
+                <a href="#biodata" class="nav-link-custom">Biodata</a>
+                <a href="#oshi" class="nav-link-custom">Oshi</a>
+                <a href="#project" class="nav-link-custom">Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 2. HERO SECTION (BERANDA UTAMA) ===== -->
+    <!-- PETUNJUK: Ganti nama, bio, dan foto profil di bagian ini -->
+    <section id="beranda" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Kiri: Teks & CTA -->
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <!-- Badge Status -->
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Tersedia untuk Kolaborasi Project</span>
+                    </div>
+
+                    <!-- Nama Utama -->
+                    <h1 class="hero-name">
+                        Habib Muzakki<br>
+                        <span class="accent-text">Piliang</span>
+                    </h1>
+
+                    <!-- Bio Singkat -->
+                    <p class="hero-bio">
+                        👨🏻‍💻 Mahasiswa <strong>D4 Vokasi Teknik Informatika</strong> di <strong>Universitas Harkat Negeri Tegal</strong>.
+                        Seorang <strong>Gen Z</strong> yang passionate di dunia <strong>Front-End Development</strong>,
+                        <strong>Junior Bug Hunter pemula</strong> dengan <strong>OWASP ZAP</strong>, dan tentunya
+                        <strong>Fans JKT48 sejati</strong> yang selalu support oshi favorit!
+                    </p>
+
+                    <!-- Tombol Aksi -->
+                    <div class="hero-cta-group">
+                        <!-- PETUNJUK: Ganti href dengan link GitHub/portofolio Anda -->
+                        <a href="https://github.com/habibmuzakkipiliang" target="_blank" class="btn-primary-custom">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            Lihat GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/habib-muzakki-piliang-15978b315/" target="_blank" class="btn-primary-custom">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            Lihat LinkedIn
+                        </a>
+
+                        <a href="#project" class="btn-secondary-custom">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            Lihat Project
+                        </a>
+                    </div>
+
+                    <!-- Statistik -->
+                    <div class="hero-stat-wrap">
+                        <div class="stat-item">
+                            <div class="stat-num">21</div>
+                            <div class="stat-label">Oshi JKT48</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">20+</div>
+                            <div class="stat-label">Project Web</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">5+</div>
+                            <div class="stat-label">Teknologi</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">#jkt48</div>
+                            <div class="stat-label">Fans Sejati</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kanan: Foto Profil dengan Ring Animasi -->
+                <!-- PETUNJUK: Ganti src="..." dengan URL/path foto profil Anda -->
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="hero-image-wrap">
+                        <div class="hero-image-ring">
+                            <img class="hero-img"
+                                 src="https://raw.githubusercontent.com/habibmuzakkipiliang/HM_Initial_Profile_Github/refs/heads/main/HM_Profile_Github.png"
+                                 alt="Foto Habib Muzakki Piliang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. BIODATA & PROFIL SECTION ===== -->
+    <!-- PETUNJUK: Edit isi biodata, pendidikan, skills sesuai kebutuhan -->
+    <section id="biodata" class="section-padding">
+        <div class="container">
+            <!-- Judul Section -->
+            <div class="text-center mb-5 pb-3">
+                <span class="section-tag">📋 Tentang Saya</span>
+                <h2 class="section-title">Biodata & <span>Profil Lengkap</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Kenali lebih dekat siapa saya, latar belakang pendidikan, keahlian,
+                    dan apa yang membuat saya bersemangat di dunia teknologi.
+                </p>
+            </div>
+
+            <!-- Grid Biodata (responsive 2 kolom di desktop, 1 di mobile) -->
+            <div class="row g-4">
+                <!-- Card 1: Profil Pribadi -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-red">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <h4>Profil Pribadi</h4>
+                        <ul>
+                            <li><strong>Nama:</strong> Habib Muzakki Piliang</li>
+                            <li><strong>Lahir:</strong> 2007 (Generasi Z)</li>
+                            <li><strong>Domisili:</strong> Kota Serang, Banten</li>
+                            <li><strong>Suku:</strong> Minangkabau-Piliang</li>
+                            <li><strong>Asal:</strong> Perantau Sumatera Barat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Pendidikan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-gold">
+                            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                        </div>
+                        <h4>Pendidikan</h4>
+                        <ul>
+                            <li><strong>Kuliah:</strong> D4 Vokasi Teknik Informatika</li>
+                            <li><strong>Univ:</strong> Universitas Harkat Negeri Tegal</li>
+                            <li><strong>SMA:</strong> MAN 2 Kota Serang (Lulus 2026)</li>
+                            <li><strong>Jurusan SMA:</strong> Kelas 12 Agama</li>
+                            <li><strong>Angkatan:</strong> Ke-34 ASCENDRIA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Keahlian Coding -->
+                <div class="col-md-12 col-lg-4">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-red">
+                            <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                        </div>
+                        <h4>Keahlian Coding</h4>
+                        <p style="margin-bottom: 10px;">Teknologi yang sedang dikuasai dan dipelajari:</p>
+                        <div class="skill-chips">
+                            <!-- PETUNJUK: Tambah/hapus chip skill sesuai kebutuhan -->
+                            <span class="skill-chip">HTML5</span>
+                            <span class="skill-chip">CSS3</span>
+                            <span class="skill-chip">Bootstrap 5</span>
+                            <span class="skill-chip">JavaScript dasar</span>
+                            <span class="skill-chip">Python dasar</span>
+                            <span class="skill-chip">C++ Dasar</span>
+                            <span class="skill-chip">OWASP ZAP (Bug Hunter)</span>
+                            <span class="skill-chip">VS Code</span>
+                            <span class="skill-chip">Git & GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Pengalaman & Penghargaan -->
+                <div class="col-md-6">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-gold">
+                            <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+                        </div>
+                        <h4>🏆 Penghargaan & Prestasi</h4>
+                        <ul>
+                            <li><strong>Medali Emas</strong> RSCI Informatika 2025</li>
+                            <li><strong>Medali Perak</strong> IOS Informatika 2025</li>
+                            <li><strong>Medali Perunggu</strong> SSO Informatika 2025</li>
+                            <li><strong>Finalis OSN-K Informatika Tahun 2025</strong></li>
+                            <li>Excellent Grade — Rakamin Academy 2024</li>
+                            <li>Sertifikat Bootcamp Python Special Skill Indonesia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5: Minat & Hobi -->
+                <div class="col-md-6">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-red">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <h4>💖 Minat & Hobi</h4>
+                        <ul>
+                            <li>🎵 <strong>Fans JKT48</strong> — Idol enthusiast sejati</li>
+                            <li>🕵️ <strong>Junior Bug Hunter</strong> — Explore keamanan web (OWASP ZAP)</li>
+                            <li>💻 <strong>Front-End Dev</strong> — Desain & build website</li>
+                            <li>📚 <strong>Novelis Pemula</strong> — Tulis cerita di Wattpad</li>
+                            <li>📖 <strong>Menyukai Informatika & IPS</strong></li>
+                            <li>🤖 <strong>Menggunakan AI Agentic IDE Coding Tools (Trae AI, Cursor AI, Google Antigravity AI dan Kilo Code)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--JKT48 Official resmi-->
+                <div class="col-md-12 col-lg-4">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-gold">
+                             <svg viewBox="0 0 24 24">
+                                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                            </svg>
+                        </div>
+                        <h4>JKT48 Official Resmi</h4>
+                        <ul style="line-height: 2.0em; font-weight: bolder;">
+                            <li>IG (Official):<a href="https://www.instagram.com/jkt48/" target="_blank">KLIK DISINI</a></li>
+                            <li>Tiktok (Official) : <a href="https://www.tiktok.com/@jkt48.official" target="_blank">KLIK DISINI</a></li>
+                            <li>Twitter (Official):<a href="https://x.com/officialJKT48?lang=id" target="_blank">KLIK DISINI</a></li>
+                            <li>IG (Fans Utama) : <a href="https://www.instagram.com/alliance_jkt48/">KLIK DISINI</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card Bonus: Media Sosial -->
+                <div class="col-md-12 col-lg-4">
+                    <div class="biodata-card">
+                        <div class="biodata-icon-wrap grad-gold">
+                             <svg viewBox="0 0 24 24">
+                                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                            </svg>
+                        </div>
+                        <h4>Media Sosial saya</h4>
+                        <ul style="line-height: 2.0em; font-weight: bolder;">
+                            <li>IG : <a href="https://instagram.com/habib_muzakki_piliang" target="_blank">@habib_muzakki_piliang</a></li>
+                            <li>Tiktok : <a href="https://tiktok.com/@habib_muzakki_piliang22" target="_blank">@habib_muzakki_piliang22</a></li>
+                            <li>Twitter : <a href="https://x.com/habib_muzakki12" target="_blank">@habib_muzakki12</a></li>
+                            <li>Youtube : <a href="https://www.youtube.com/@habib_muzakki_piliang" target="_blank">@habib_muzakki_piliang</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. OSHI JKT48 FANPAGE SECTION ===== -->
+    <!-- ================================================================
+         PETUNJUK PENTING: 19 Oshi JKT48 dengan status MAIN / REGULAR.
+         Untuk menambah/menghapus oshi, duplikat/hapus blok <div class="col...">
+         setiap card oshi di bawah ini. Ganti juga nama, img src, dan status.
+         ================================================================ -->
+    <section id="oshi" class="oshi-section section-padding">
+        <div class="container">
+            <!-- Judul Section Oshi -->
+            <div class="text-center mb-5 pb-3">
+                <span class="section-tag">🎵 Oshi Favorit</span>
+                <h2 class="section-title">JKT48 <span>Oshi Fanpage</span></h2>
+                <p class="section-subtitle mx-auto">
+                    21 member JKT48 favorit yang selalu saya support.
+                    Dari MAIN Oshi sampai REGULAR Oshi dan TRAINEE Oshi, semuanya spesial! 💖
+                </p>
+            </div>
+
+            <!-- LEGEND Status Oshi -->
+            <div class="d-flex justify-content-center gap-4 mb-5 flex-wrap">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="oshi-status-badge main">MAIN</span>
+                    <span style="color: var(--text-secondary); font-size: 0.88rem; font-weight: 600;">Oshi Utama (Top 10)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="oshi-status-badge regular">REGULAR</span>
+                    <span style="color: var(--text-secondary); font-size: 0.88rem; font-weight: 600;">Oshi Reguler (Next 8)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="oshi-status-badge trainee">TRAINEE</div>
+                    <span style="color: var(--text-secondary); font-size: 0.88rem; font-weight: 600;">Oshi Trainee (Next 3)</span>
+                </div>
+            </div>
+
+            <!-- GRID CARD OSHI (responsive: 1-2-3-4 kolom) -->
+            <div class="row g-4">
+
+                <!-- ============ MAIN OSHI (10 orang) ============ -->
+
+                <!-- Oshi 1: Gracie MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://pbs.twimg.com/media/HSRK_XgbsAATQXM?format=jpg&name=large"
+                                 alt="Gracie JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-gracie-jkt48-00-hwff8-yt7ljp" target="_blank">Gracie JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Manis seperti gulali, imut seperti kelinci! Xi xi xi, Gracie!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.gracie/?hl=id" target="_blank">@jkt48.gracie</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@graciejkt48" target="_blank">@graciejkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/Gracie_JKT48" target="_blank">@Gracie_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 2: Aralie MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0SRff9CtNVASCjQEidUnuRaED0zK9RsKVQcJH8oo-_fVuXJd9yBHxq0&s=10"
+                                 alt="Aralie JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-aralie-jkt48-yang-suka-public-speaking-01-hjrfk-7rmt98" target="_blank">Aralie JKT48</a></h5>
+                            <div class="oshi-role">Team Passion JKT48</div>
+                            <p class="oshi-desc">Seperti bunga yang mekar, aku akan membuat kamu, kamu, dan kamu terbayang-bayang. Aku Ara-Aralie!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.aralie/" target="_blank">@jkt48.aralie</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.aralie" target="_blank">@jkt48.aralie</a></li>
+                                    <li>Twitter : <a href="https://x.com/Aralie_JKT48" target="_blank">@Aralie_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 3: Lily MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://image.idntimes.com/post/20240325/whatsapp-image-2024-03-26-at-123214-am-770cbc2889bb4c14bf5042be7b505d5d-efab8135144ace2c99bbee57fe71840e.jpeg?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75"
+                                 alt="Lily JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-hillary-abigail-jkt48-c1c2-01-hjrfk-0kntdl" target="_blank">Lily JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Pi-pi-pi-pum! Aku akan mengejutkanmu dengan kehebatanku! Halo, aku Lily!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.lily_/" target="_blank">jkt48.lily_</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.lily?lang=id-ID" target="_blank">@jkt48.lily</a></li>
+                                    <li>Twitter : <a href="https://x.com/Lily_JKT48" target="_blank">@Lily_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 4: Michie MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnMt_7Tt-3jEo0eyfNc7uNL2_Wr3aF7__Ve5yIgPQWIFZQJh71pefp7baM&s=10"
+                                 alt="Michie JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-michie-jkt48-yang-genap-15-tahun-banyak-fans-01-hjrfk-ymyqs2" target="_blank">Michie JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Always your number one, till infinity and beyond! Hello everyone, it's Michie!
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.michie_/?hl=id" target="_blank">@jkt48.michie_</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@michiejkt48" target="_blank">@michiejkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/Michie_JKT48" target="_blank">@Michie_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 5: Fritzy MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://pbs.twimg.com/media/HSgexV-a4AAXK95?format=jpg&name=900x900"
+                                 alt="Fritzy JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-fritzy-rosmerian-jkt48-c1c2-01-hjrfk-rhr108" target="_blank">Fritzy JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Abracadabra! Si pesulap yang siap membuat hatimu terpikat. It's me, Fritzy!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.fritzy.r/" target="_blank">@jkt48.fritzy.r</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.fritzy" target="_blank">@jkt48.fritzy</a></li>
+                                    <li>Twitter : <a href="https://x.com/RFritzy_JKT48" target="_blank">@RFritzy_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 6: Lana MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://image.idntimes.com/post/20240208/whatsapp-image-2024-02-08-at-94913-pm-770cbc2889bb4c14bf5042be7b505d5d-50901bb6ab4c7f2df728ac035a5afbc4.jpeg?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75"
+                                 alt="Lana JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-aurhel-alana-trainee-jkt48-yang-hobi-makeup-01-hjrfk-qsrshp" target="_blank">Lana JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Dengan Kekuatan bulan, Aku akan.... menyihirmu dengan pesona ku! Halo semuanya aku Lana!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.lana.a/" target="_blank">@jkt48.lana.a</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.lana" target="_blank">@jkt48.lana</a></li>
+                                    <li>Twitter : <a href="https://x.com/AR_LanaJKT48" target="_blank">@AR_LanaJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 7: Erine MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://kuyou.id/content/images/jkt48-20240918121637.jpg"
+                                 alt="Erine JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://kuyou.id/homepage/read/40166/biodata-dan-profil-catherina-vallencia-aka-erine-jkt48-umur-agama-dan-ig-trainee-yang-disorot" target="_blank">Erine JKT48</a></h5>
+                            <div class="oshi-role">Team Passion JKT48</div>
+                            <p class="oshi-desc">"Hadir dengan seribu kejutan, Checkmate! Siap memenangkan hatimu. Halo semuanya, namaku Erine!".
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/JKT48.ERINE/" target="_blank">@jkt48.erine</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.erine_" target="_blank">@jkt48.erine</a></li>
+                                    <li>Twitter : <a href="https://x.com/CErine_JKT48" target="_blank">@CErine_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 8: Delynn  MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://image.idntimes.com/post/20240208/whatsapp-image-2024-02-08-at-94918-pm-770cbc2889bb4c14bf5042be7b505d5d-c069231fa40ae5c3d3478ef168d80670.jpeg?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75"
+                                 alt="Delynn JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-delynn-trainee-jkt48-yang-hobi-main-game-01-hjrfk-zlfsf7" target="_blank">Delynn JKT48</a></h5>
+                            <div class="oshi-role">Team Dream JKT48</div>
+                            <p class="oshi-desc">Nyemangatin dan ngangenin, siapa yang kamu pikirin? Delynn!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.delynn/?hl=id" target="_blank">@jkt48.delynn</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.delynn?lang=id-ID" target="_blank">@jkt48.delynn</a></li>
+                                    <li>Twitter : <a href="https://x.com/Delynn_JKT48" target="_blank">@Delynn_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 9: Anindya MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://i.pinimg.com/originals/45/a8/07/45a807812d937e4d938b8c02ee8e0e28.jpg"
+                                 alt="Anindya JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://kumparan.com/profil-tokoh/biodata-anindya-jkt48-perjalanan-karier-dan-fakta-menariknya-238IopYGAT3" target="_blank">Anindya JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Si mungil hadir semanis mangga. Hai, aku Anindya!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.anindya_/" target="_blank">@jkt48.anindya_</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@anindyajkt48" target="_blank">@anindyajkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/AR_AnindyaJKT48" target="_blank">@AR_AnindyaJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 10: Freya MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge main">MAIN</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs-vXGb075WKZ964TBZXcZvJflmhzncqIkFychHU6SMhcVual4cufqHpDp&s=10"
+                                 alt="Freya JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-freya-jkt48-00-tkkls-g76gvq" target="_blank">Freya JKT48 (Kapten JKT48)</a></h5>
+                            <div class="oshi-role">Team Dream JKT48</div>
+                            <p class="oshi-desc">"Gadis koleris yang suka berimajinasi, terangi harimu dengan senyuman karamelku. Halo namaku Freya!".
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.freya/?hl=id" target="_blank">@jkt48.freya</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@freyajkt48" target="_blank">@freyajkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/Freya_JKT48" target="_blank">@Freya_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ REGULAR OSHI (7 orang) ============ -->
+
+                <!-- Oshi 11: Trisha REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://pbs.twimg.com/media/HSLgOIzakAEmomT?format=jpg&name=900x900"
+                                 alt="Trisha JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://kuyou.id/homepage/read/40737/biodata-dan-profil-jazzlyn-trisha-jkt48-umur-agama-dan-jiko-trainee-termuda-di-gen-12" target="_blank">Trisha JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">"Pelukis yang hadir di mimpi-mimpi indahmu. One… two… tri… sha! Halo semua, aku Trisha".
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.trisha/?hl=id" target="_blank">@jkt48.trisha</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.trisha" target="_blank">@jkt48.trisha</a></li>
+                                    <li>Twitter : <a href="https://x.com/JTrisha_JKT48" target="_blank">@JTrisha_JKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 11: Christy MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://i.pinimg.com/736x/e9/ac/95/e9ac953b042c2c91fa8741c45c0bd5af.jpg"
+                                 alt="Christy JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-christy-jkt48-00-tkkls-nk4w7d" target="_blank">Christy JKT48</a></h5>
+                            <div class="oshi-role">Team Passion JKT48</div>
+                            <p class="oshi-desc">Peduli dan berbaik hati, siapakah dia? Christy! Halo semuanya aku Christy, terima kasih!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.christy/?hl=id" target="_blank">@jkt48.christy</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@christyjkt48" target="_blank">@christyjkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/A_ChristyJKT48" target="_blank">@A_ChristyJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 12: Olla REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaFzXMyS2miZKenE3ULJ7_Z-eWz8t3D7P14TVwFtrm0fVUwWA5PfWnZg2&s=10"
+                                 alt="Olla JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-olla-jkt48-00-sd4vv-19rrdg" target="_blank">Olla JKT48</a></h5>
+                            <div class="oshi-role">Team Dream JKT48</div>
+                            <p class="oshi-desc">Dengan keajaibanku, aku akan membuat kalian selalu tertawa! Halo, aku Olla, si mechanic girl!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.olla/" target="_blank">@jkt48.olla</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@ollajkt48" target="_blank">@ollajkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/F_OllaJKT48" target="_blank">@F_OllaJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 13: Jessi REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1HqnVOYeA4qL15WCy-XSXNvLuRPxmlyxd5FfiThxR1hXCW4lS9QjTRHiQ&s=10"
+                                 alt="Jessi JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/perjalanan-karier-jessi-jkt48-yang-raih-peringkat-3-di-ssk-2024-01-hjrfk-1vnrx4" target="_blank">Jessi JKT48</a></h5>
+                            <div class="oshi-role">Team Passion JKT48</div>
+                            <p class="oshi-desc">Suka menari dan akan selalu berusaha menjadi sumber energimu. Hai, aku Jessi!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.jessi/" target="_blank">@jkt48.jessi</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jessijkt48" target="_blank">@jessijkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/C_JessiJKT48?lang=id" target="_blank">@C_JessiJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 14: Fiony -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://i.pinimg.com/1200x/b1/54/6f/b1546fa552b2350cba3e7c6085e05962.jpg"
+                                 alt="Fiony JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-fiony-jkt48-00-pb72b-czw62m" target="_blank">Fiony JKT48</a></h5>
+                            <div class="oshi-role">Team Love JKT48</div>
+                            <p class="oshi-desc">Seperti symphony yang menenangkan hati. Halo, aku Fiony.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.fiony/" target="_blank">@jkt48.fiony</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@fionyjkt48" target="_blank">@fionyjkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/A_FionyJKT48" target="_blank">@A_FionyJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 15: Muthe REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://i.pinimg.com/736x/8b/50/1e/8b501ec10818c77f4ab0bf6a13e593e6.jpg"
+                                 alt="Muthe JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-muthe-jkt48-00-19lfc-t3hvz7" target="_blank">Muthe JKT48</a></h5>
+                            <div class="oshi-role">Team Passion JKT48</div>
+                            <p class="oshi-desc">Dengan kelincahanku, aku akan menari setiap hari. Panggil aku, mu..mu..mu..Muthe!
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.muthe_/" target="_blank">@jkt48.muthe</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@muthejkt48" target="_blank">@muthejkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/A_MutheJKT48" target="_blank">@A_MutheJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 16: Marsha REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://image.idntimes.com/post/20240603/tangkapan-layar-2024-06-03-pukul-164332-besar-8543886976cfd3b26508d20231ca1611.jpeg?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75"
+                                 alt="Marsha JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-marsha-jkt48-00-hwff8-wbvt73" target="_blank">Marsha JKT48</a></h5>
+                            <div class="oshi-role">Team Dream JKT48</div>
+                            <p class="oshi-desc">"Seperti pizza yang dinanti-nantikan semua orang, selalu nantikan aku, ya! Halo, aku Marsha.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.marsha/" target="_blank">@jkt48.marsha</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@marsha.jkt48" target="_blank">@marsha.jkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/L_MarshaJKT48" target="_blank">@L_MarshaJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 17: Eli REGULAR -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_tPfpTlCZigsk8y_P4zIUuv1PVBUcUz1l0k_OTiPWbUmjT6GWA-yzRImy&s=10"
+                                 alt="Eli JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-profil-eli-jkt48-00-hwff8-k80fy2" target="_blank">Eli JKT48</a></h5>
+                            <div class="oshi-role">Team Dream JKT48</div>
+                            <p class="oshi-desc">Bagai lembayung senja, dengan energi kegembiraanku, aku akan menghangatkan suasana. Halo semuanya, aku Ceu Eli!.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/jkt48.eli/?hl=id" target="_blank">@jkt48.eli</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@elijkt48" target="_blank">@elijkt48</a></li>
+                                    <li>Twitter : <a href="https://x.com/H_EliJKT48?lang=id" target="_blank">@H_EliJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 18: Celine Ex MAIN -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge regular">REGULAR</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbxFB-GGh5QkjIrE2x16qffdmy1hqTDiIub4SIaESiyNSBq6ArFwARkRYn&s=10"
+                                 alt="Celine Ex JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.ggwp.id/entertainment/trend/profil-celine-00-zrzwz-gpb0tk" target="_blank">Celine Ex JKT48</a></h5>
+                            <div class="oshi-role">Ex JKT48</div>
+                            <p class="oshi-desc">Aku ingin menjadi musik yang membuat kalian tersenyum! Hai semua, aku Celine.
+
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/celine.chenzw/?hl=id" target="_blank">@celine.chenzw</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@celine.tzh" target="_blank">@celine.tzh</a></li>
+                                    <li>Twitter : <a href="https://x.com/Celine_tzh" target="_blank">@Celine_tzh</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ TRAINEE OSHI (3 orang) ============ -->
+
+                <!-- Oshi 19: Mikaela Trainee -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
+                            <img src="https://image.idntimes.com/post/20250806/snapinsta_437c1ed9-a3db-4e71-aa89-c384ee2965ab.jpg"
+                                 alt="Mikaela JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-fakta-mikaela-jkt48-c1c2-01-hjrfk-144nrl" target="_blank">Mikaela JKT48</a></h5>
+                            <div class="oshi-role">Trainee JKT48</div>
+                            <p class="oshi-desc"><b>Mikaela Kusjanto</b>, Camera... Roll... Action! Sutradara yang akan mewarnai kisah hidupmu dengan penuh warna. Hai Aku Mikaela!.
+                            
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/mikaela.jkt48/" target="_blank">@mikaela.jkt48</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.mikaela" target="_blank">@jkt48.mikaela</a></li>
+                                    <li>Twitter : <a href="https://x.com/M_MikaelaJKT48" target="_blank">@M_MikaelaJKT48</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 20: Ekin Trainee -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOEsj6e4bCDrJEzzM6QcSkcYZHBxHhOM-d0ZfV36lsp1UMR7QIJokYdgA&s=10"
+                                 alt="Ekin JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/biodata-dan-fakta-ekin-jkt48-c1c2-01-hjrfk-krvr6d" target="_blank">Ekin JKT48</a></h5>
+                            <div class="oshi-role">Trainee JKT48</div>
+                            <p class="oshi-desc"><b>Jacqueline Immanuela Jonathan</b>, Sesejuk dan sedingin mint, aku akan menyegarkan harimu! Halo semuanya, panggil aku Ekin!.
+                            
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/ekin.jkt48/" target="_blank">@ekin.jkt48</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.ekin" target="_blank">@jkt48.ekin</a></li>
+                                    <li>Twitter : <a href="http://x.com/Ekin_JKT48" target="_blank">@Ekin_JKT48</a></li>
+                                </ul>
+                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi 21: Intan Trainee -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                    <div class="oshi-card">
+                        <div class="oshi-img-wrap">
+                            <span class="oshi-status-badge trainee">TRAINEE</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdYI91Vn940RFMo3ZtsD9ivedr883SU-kbp8qftlW_n4zr9UeaWAZolo&s=10"
+                                 alt="Intan JKT48">
+                        </div>
+                        <div class="oshi-body">
+                            <h5 class="oshi-name"><a href="https://www.idntimes.com/hype/entertainment/profil-dan-biodata-intan-jkt48-c1c2-01-hjrfk-g22c6y" target="_blank">Intan JKT48</a></h5>
+                            <div class="oshi-role">Trainee JKT48</div>
+                            <p class="oshi-desc"><b>Nur Intan</b>, Intan permata yang berkilau, temukan cahayaku di hatimu! Halo semuanya, panggil aku Intan!.
+                            
+                                <ul class="oshi-desc" style="font-weight: bolder;">
+                                    <li>IG : <a href="https://www.instagram.com/intan.jkt48/" target="_blank">@intan.jkt48</a></li>
+                                    <li>Tiktok : <a href="https://www.tiktok.com/@jkt48.intan" target="_blank">@jkt48.intan</a></li>
+                                    <li>Twitter : <a href="https://x.com/N_IntanJKT48" target="_blank">@N_IntanJKT48</a></li>
+                                </ul>
+                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- AKHIR GRID OSHI -->
+        </div>
+    </section>
+
+    <!-- ===== 5. SHOWCASE PROJECT UTAMA (Glassmorphism) ===== -->
+    <!-- PETUNJUK: Ganti link href, judul, dan deskripsi project sesuai kebutuhan -->
+    <section id="project" class="section-padding">
+        <div class="container">
+            <!-- Judul Section Project -->
+            <div class="text-center mb-5 pb-3">
+                <span class="section-tag">💼 Karya Terbaik</span>
+                <h2 class="section-title">Showcase <span>Project Utama</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Dua project web andalan yang telah saya bangun dengan penuh cinta dan dedikasi.
+                    Klik card untuk melihat langsung!
+                </p>
+            </div>
+
+            <!-- Grid 2 kolom Glassmorphism Card -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Project 1: Website Portofolio Futuristik V2 -->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://website-futuristik-versi-2-baru.vercel.app/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 Front-End Futuristik</span>
+                        <!-- Judul -->
+                        <h3>Website Portofolio Futuristik Baru V2 (Vercel)</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Portfolio personal versi terbaru dengan desain ultra-modern,
+                            animasi smooth, dan efek glassmorphism. Dibangun dengan
+                            stack HTML5, CSS3, dan Bootstrap 5 yang fully responsive.
+                            Tampilkan keahlian Front-End saya dengan gaya yang wow!
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 2: Website Portofolio Futuristik Baru V2 -->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://website-portofolio-baru-futuristik.vercel.app/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 Website Portofolio Futuristik Baru V1</span>
+                        <!-- Judul -->
+                        <h3>Website Portofolio Futuristik Baru V1 (Vercel)</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Website portfolio futuristik V1 yang saya buat dengan HTML, CSS, dan Bootstrap 5 yang fully responsive dengan desain modern futuristik awal.
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Project 3: FANDOM GAME GUNSHIP BATTLE 3D JOYCITY-->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://website-fandom-gunship-battle-3d.netlify.app/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 FANDOM GAME GUNSHIP BATTLE 3D JOYCITY</span>
+                        <!-- Judul -->
+                        <h3>FANDOM GAME GUNSHIP BATTLE 3D JOYCITY (Netlify)</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Website fandom Gunship Battle 3D Joycity yang saya bangun dengan HTML, CSS, dan Bootstrap 5 yang fully responsive.
+                            Tampilkan keahlian Front-End saya dengan gaya yang wow tapi sederhana!
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 4: FANDOM WEBSITE THE SMURFS 2021-->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://website-fandom-the-smurfs-2021.netlify.app/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 FANDOM WEBSITE THE SMURFS 2021</span>
+                        <!-- Judul -->
+                        <h3>FANDOM WEBSITE THE SMURFS 2021 (Netlify)</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Website fandom The Smurfs 2021 yang saya bangun dengan HTML, CSS, dan Bootstrap 5 yang fully responsive.
+                            Tampilkan keahlian Front-End saya dengan gaya yang wow tapi sederhana!
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 5: Daftar Versi dan Sejarah Dunia Teknologi Modern sekarang-->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://daftar-versi-android-teknologi-hp.vercel.app/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 Daftar Versi dan Sejarah Dunia Teknologi Modern sekarang</span>
+                        <!-- Judul -->
+                        <h3>Daftar Versi dan Sejarah Dunia Teknologi Modern sekarang (Vercel)</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Website versi dan sejarah dunia teknologi modern sekarang yang saya bangun dengan HTML, CSS, dan Bootstrap 5 yang fully responsive.
+                            Tampilkan keahlian Front-End saya dengan gaya yang sederhana dan simpel.
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 6: WEBSITE PERTAMA GITHUB PAGES -->
+                <div class="col-md-6 col-lg-5">
+                    <a href="https://habibmuzakkipiliang.github.io/website_portofolio_awal/" target="_blank" class="project-card">
+                        <!-- Ikon Project -->
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <!-- Tag -->
+                        <span class="project-tag">🚀 Website Pertama Github Pages</span>
+                        <!-- Judul -->
+                        <h3>WEBSITE PERTAMA GITHUB PAGES</h3>
+                        <!-- Deskripsi -->
+                        <p>
+                            Website portfolio pertama yang saya bangun sendiri dengan HTML, CSS, Boostrap dasar yang awal dan dihosting dengan menggunakan Github Pages.
+                        </p>
+                        <!-- Link Arrow -->
+                        <div class="project-link-arrow">
+                            <span>Kunjungi Website</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. FOOTER (Hak Cipta) ===== -->
+    <!-- PETUNJUK: Edit teks copyright di bawah ini -->
+    <footer class="footer-custom" style="line-height: 2.5em;">
+        <div class="container">
+            <p class="footer-text">
+                © 2026 Habib Muzakki Piliang &nbsp;•&nbsp; Made with
+                <span class="heart">♥</span>
+                di Serang, Banten &nbsp;•&nbsp; Tema JKT48 Super Modern
+                <br>
+                <span style="font-size: 1.0em; opacity: 0.8;">Dibuat pada Senin, 17 Agustus 2026, pukul 20.40 WIB</span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
