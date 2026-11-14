@@ -1,0 +1,58 @@
+header {
+    font-size: 1rem;
+    font: "Silkscreen", sans-serif;
+    line-height: 3.5em;
+    background-color: yellow;
+    color: black;
+}
+
+h1, h2, h3 {
+    line-height: 3;
+}
+
+wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: max (16 px, env (safe-area-inset-left, 0px ));
+    padding-right: max (16px, env (safe-area-inset-right, 0px)) ;
+}
+
+/* Header */
+
+.site-header {
+    background-color: black;
+    border-bottom: 4px solid white;
+}
+
+body {
+    font-size: 1rem;
+    font: "Silkscreen", sans-serif;
+    line-height: 3.5em;
+    background-color: #f4f0ef;
+    color: #14142b;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a { color: green;}
+
+p {
+
+}
+
+.brand {
+    color: red;
+}
+
+
+*, *::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-widht : 768px) {
+    .layout {grid-template-columns: 2fr;}
+    .hero h1 {font-size: 2rem;}
+}
