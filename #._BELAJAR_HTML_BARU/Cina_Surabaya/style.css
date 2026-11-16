@@ -1,0 +1,949 @@
+/* ==========================================================================
+   STYLE.CSS - 2026 WORLD-CLASS LUXURY ORIENTAL HERITAGE DESIGN SYSTEM
+   Theme        : Authentic Chinese Surabaya Cultural Heritage (Pecinan Surabaya)
+                  (Warm Porcelain Silk, Imperial Gold, Vermilion Lacquer, Antique Paper)
+   Typography   : 100% Strict Pure Black (#000000 & #111111) for absolute contrast
+   Author       : Habib Muzakki Piliang
+   Specification: 100% Pure CSS3 Modern & Bootstrap 5 (Zero JS, Zero Tailwind)
+   Architecture : 2026 Micro-Borders, Frosted Glassmorphism, Fluid Clamp Typography,
+                  60fps GPU Acceleration, Clean Semantics for Beginners.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR TOKENS & SYSTEM VARIABLES (PALET ETNIS TIONGHOA SURABAYA)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Nuansa Latar Belakang Khas Pecinan Surabaya (Porcelain, Silk & Tea Paper) */
+  --bg-porcelain-warm: #fcf9f2;
+  /* Porselen sutra hangat khas keramik Tiongkok */
+  --bg-creamy-silk: #f7f1e4;
+  /* Sutra krem oriental vintage */
+  --bg-antique-paper: #f0e6d2;
+  /* Kertas perkamen kuno tradisi dinasti */
+  --bg-gold-subtle: #fbf4de;
+  /* Semburat kuning emas kaisar lembut */
+  --bg-crimson-subtle: #fdf0f0;
+  /* Semburat merah lampion lembut */
+  --bg-card-white: #ffffff;
+  /* Kartu putih bersih */
+
+  /* Tulisan Hitam Pekat (100% Strict Pure Black Contrast - WCAG AAA Compliant) */
+  --text-pure-black: #000000;
+  --text-black-soft: #111111;
+  --text-black-deep: #1a1a1a;
+
+  /* Aksen Tradisi Cina Surabaya: Emas Murni, Merah Klenteng, Perunggu */
+  --oriental-gold: #c99a2c;
+  /* Emas murni kemakmuran */
+  --oriental-gold-dark: #916b17;
+  /* Emas tua berwibawa */
+  --oriental-gold-light: #fae8b2;
+  /* Emas muda berkilau */
+  --oriental-red: #8c1414;
+  /* Merah vermilion klenteng Hok An Kiong */
+  --oriental-red-dark: #5c0b0b;
+  /* Merah marun tradisi */
+  --oriental-jade: #1b6b47;
+  /* Hijau giok Masjid Cheng Ho */
+
+  /* Garis Batas Arsitektural */
+  --border-gold: #c99a2c;
+  --border-crimson: #8c1414;
+  --border-black: #000000;
+  --border-subtle: #e2d7c1;
+  --border-delicate: rgba(201, 154, 44, 0.45);
+
+  /* Bayangan Halus Bertingkat Tren 2026 (Ultra Soft Diffuse Shadows) */
+  --shadow-subtle: 0 4px 14px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 28px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 20px 42px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 8px 24px rgba(201, 154, 44, 0.28);
+
+  /* Radius & Sudut Arsitektur Modern */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Tipografi */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL RESET & BASE RULES
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  background-color: var(--bg-porcelain-warm);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-porcelain-warm) !important;
+  color: var(--text-pure-black) !important;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tulisan Hitam Semua (Semua Heading, Paragraf, dan Elemen Teks) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: var(--text-pure-black) !important;
+  line-height: 1.28;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+p,
+span,
+div,
+li,
+td,
+th,
+strong,
+b,
+em,
+small,
+label {
+  color: var(--text-pure-black) !important;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-pure-black) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+::selection {
+  background-color: var(--oriental-gold-light);
+  color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   3. BACKGROUND UTILITIES (BERNUANSA ETNIS CINA SURABAYA)
+   -------------------------------------------------------------------------- */
+.bg-porcelain {
+  background-color: var(--bg-porcelain-warm) !important;
+}
+
+.bg-silk-warm {
+  background-color: var(--bg-creamy-silk) !important;
+}
+
+.bg-antique-paper {
+  background-color: var(--bg-antique-paper) !important;
+}
+
+.bg-gold-subtle {
+  background-color: var(--bg-gold-subtle) !important;
+}
+
+.bg-crimson-subtle {
+  background-color: var(--bg-crimson-subtle) !important;
+}
+
+.bg-card-white {
+  background-color: var(--bg-card-white) !important;
+}
+
+.border-oriental-gold {
+  border-color: var(--border-gold) !important;
+}
+
+.border-oriental-red {
+  border-color: var(--border-crimson) !important;
+}
+
+.border-oriental-black {
+  border-color: var(--border-black) !important;
+}
+
+.border-oriental-subtle {
+  border-color: var(--border-subtle) !important;
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}
+
+.max-w-900 {
+  max-width: 900px;
+}
+
+/* --------------------------------------------------------------------------
+   4. TOP BAR NOTIFICATION (ORIENTAL GOLD SILK WITH PURE BLACK TEXT)
+   -------------------------------------------------------------------------- */
+.top-bar-custom {
+  background: linear-gradient(90deg, #f2e3be 0%, #f9eed2 50%, #f2e3be 100%);
+  border-bottom: 2px solid var(--oriental-gold);
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--text-pure-black) !important;
+  position: relative;
+  z-index: 1050;
+}
+
+.badge-top-pill {
+  background: linear-gradient(135deg, #fae8b2 0%, #c99a2c 100%);
+  color: #000000 !important;
+  font-weight: 800;
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  border: 1px solid var(--oriental-gold-dark);
+}
+
+/* --------------------------------------------------------------------------
+   5. NAVBAR STICKY MODERN (PORCELAIN GLASS & CHIP GESTURES)
+   -------------------------------------------------------------------------- */
+.main-navbar {
+  background-color: rgba(252, 249, 242, 0.96) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid var(--oriental-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1040;
+}
+
+.brand-badge {
+  background: linear-gradient(135deg, #fae8b2 0%, #c99a2c 100%);
+  color: #000000 !important;
+  font-weight: 900;
+  font-size: 0.95rem;
+  padding: 6px 13px;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.08em;
+  border: 1.5px solid var(--oriental-gold-dark);
+  box-shadow: 0 3px 8px rgba(201, 154, 44, 0.35);
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  font-weight: 800;
+  color: var(--text-pure-black) !important;
+  white-space: nowrap;
+}
+
+.nav-scroll-container {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 6px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 16px;
+  font-size: clamp(0.75rem, 1.8vw, 0.82rem);
+  font-weight: 800;
+  color: var(--text-pure-black) !important;
+  background-color: #ffffff;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--oriental-gold);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-chip:hover {
+  background-color: var(--oriental-gold);
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 154, 44, 0.35);
+}
+
+.nav-chip.highlight-chip {
+  background: linear-gradient(135deg, #fae8b2 0%, #c99a2c 100%);
+  color: #000000 !important;
+  border-color: var(--oriental-gold-dark);
+  box-shadow: 0 2px 8px rgba(201, 154, 44, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO SECTION (ORIENTAL HERITAGE ATMOSPHERE & PURE BLACK TEXT)
+   -------------------------------------------------------------------------- */
+.hero-wrapper {
+  position: relative;
+  background: radial-gradient(circle at 50% 25%, #fffbf0 0%, #f6edd9 55%, #ecdcb8 100%);
+  padding: clamp(55px, 8vw, 110px) 15px clamp(50px, 7vw, 95px);
+  border-bottom: 4px solid var(--oriental-gold);
+  color: var(--text-pure-black) !important;
+  overflow: hidden;
+}
+
+.hero-pattern-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 100% 0%, rgba(201, 154, 44, 0.12) 0, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(140, 20, 20, 0.06) 0, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 0l28 28-28 28L0 28z' fill='%23c99a2c' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--oriental-gold);
+  border-radius: var(--radius-pill);
+  color: var(--text-pure-black) !important;
+  font-size: clamp(0.72rem, 1.8vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.hero-main-title {
+  font-size: clamp(1.85rem, 4.8vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: var(--text-pure-black) !important;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+  line-height: 1.85;
+  color: var(--text-pure-black) !important;
+  font-weight: 600;
+  max-width: 860px;
+  margin: 0 auto 30px;
+}
+
+.btn-cta-gold {
+  background: linear-gradient(135deg, #fae8b2 0%, #c99a2c 100%);
+  color: #000000 !important;
+  font-weight: 800;
+  padding: 13px 30px;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid var(--oriental-gold-dark);
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  box-shadow: var(--shadow-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-cta-gold:hover {
+  background: #ffffff;
+  color: #000000 !important;
+  border-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cta-outline-gold {
+  border: 2px solid #000000;
+  color: var(--text-pure-black) !important;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: var(--radius-xs);
+  background-color: #ffffff;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-cta-outline-gold:hover {
+  background-color: #000000;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION HEADERS & ORNAMENT SYSTEM
+   -------------------------------------------------------------------------- */
+.section-meta-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-pure-black) !important;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--oriental-gold);
+  padding-bottom: 2px;
+}
+
+.section-headline {
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-pure-black) !important;
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 14px auto 18px;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: var(--oriental-gold);
+}
+
+.ornament-divider span {
+  color: var(--text-pure-black);
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. PROFIL HABIB MUZAKKI PILIANG (PORCELAIN CARD & GOLD BORDERS)
+   -------------------------------------------------------------------------- */
+.profile-card-sticky {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-gold);
+  border-top: 6px solid var(--oriental-red);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card-sticky:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.avatar-halo {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--oriental-red), var(--oriental-gold));
+  padding: 4px;
+  box-shadow: 0 6px 18px rgba(140, 20, 20, 0.25);
+}
+
+.avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-pure-black);
+}
+
+.biodata-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border-subtle);
+  font-size: 0.9rem;
+}
+
+.biodata-row:last-child {
+  border-bottom: none;
+}
+
+.biodata-label {
+  font-weight: 700;
+}
+
+.biodata-val {
+  font-weight: 900;
+  text-align: right;
+  max-width: 60%;
+}
+
+.content-card-box {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  border-left: 6px solid var(--oriental-gold);
+  box-shadow: var(--shadow-subtle);
+  padding: clamp(20px, 4vw, 36px);
+}
+
+.competency-item {
+  background-color: var(--bg-porcelain-warm);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-gold);
+  padding: 20px;
+  height: 100%;
+  transition: all 0.28s ease;
+}
+
+.competency-item:hover {
+  background-color: #ffffff;
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   9. METRIC PRESTASI MEDALI & PORTOFOLIO PROYEK
+   -------------------------------------------------------------------------- */
+.medal-card-luxury {
+  border-radius: var(--radius-md);
+  padding: 26px 18px;
+  text-align: center;
+  background-color: #ffffff !important;
+  border: 1.5px solid var(--border-gold);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.medal-card-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--oriental-gold);
+}
+
+.medal-card-luxury:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  background-color: var(--bg-gold-subtle) !important;
+}
+
+.project-card-interactive {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-interactive:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--oriental-gold);
+}
+
+.project-card-header {
+  padding: 20px 24px;
+  background-color: var(--bg-antique-paper);
+  border-bottom: 2px solid var(--oriental-gold);
+}
+
+/* --------------------------------------------------------------------------
+   10. ENSIKLOPEDIA SEJARAH & TIMELINE TRANSFORMASI
+   -------------------------------------------------------------------------- */
+.editorial-lead {
+  font-size: 1.05rem;
+  line-height: 1.95;
+  font-weight: 600;
+}
+
+.timeline-step-luxury {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  padding: clamp(20px, 3vw, 32px);
+  border: 1.5px solid var(--border-subtle);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 24px;
+  border-left: 8px solid var(--oriental-red);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.timeline-step-luxury:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-card);
+}
+
+/* --------------------------------------------------------------------------
+   11. CAGAR BUDAYA & KULINER HALAL CARDS
+   -------------------------------------------------------------------------- */
+.heritage-luxury-box {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heritage-luxury-box:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--oriental-gold);
+}
+
+.heritage-visual-top {
+  padding: 32px 20px;
+  text-align: center;
+  background-color: var(--bg-antique-paper);
+  border-bottom: 2px solid var(--oriental-gold);
+}
+
+.heritage-emoji-icon {
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.food-card-luxury {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-luxury:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--oriental-gold);
+}
+
+.food-card-header-luxury {
+  background-color: var(--bg-gold-subtle);
+  padding: 16px 22px;
+  border-bottom: 2px solid var(--oriental-gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   12. TABEL DEMOGRAFI & WILAYAH POPULASI (HYBRID RESPONSIVE RWD TREN 2026)
+   -------------------------------------------------------------------------- */
+.custom-demographic-table {
+  background-color: #ffffff !important;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--oriental-gold);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.custom-demographic-table thead {
+  background-color: var(--bg-antique-paper);
+  font-family: var(--font-serif);
+}
+
+.custom-demographic-table thead th {
+  padding: 18px 22px;
+  font-weight: 900;
+  border-bottom: 2px solid var(--oriental-gold);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.custom-demographic-table td {
+  padding: 18px 22px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.custom-demographic-table tr:hover td {
+  background-color: var(--bg-gold-subtle);
+}
+
+/* Card View Responsif untuk Mobile Layar Kecil (RWD Hybrid 2026) */
+.mobile-region-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mobile-region-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.mobile-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-card-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--oriental-gold-dark) !important;
+}
+
+.mobile-card-val {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   13. MANIFESTO TOLERANSI & FOOTER (ORIENTAL THEMED BACKGROUND)
+   -------------------------------------------------------------------------- */
+.manifesto-panel {
+  background-color: #ffffff !important;
+  border: 2px solid var(--oriental-gold);
+  border-radius: var(--radius-md);
+  padding: clamp(24px, 4vw, 38px);
+  box-shadow: var(--shadow-card);
+}
+
+.footer-luxury {
+  background-color: var(--bg-antique-paper) !important;
+  border-top: 4px solid var(--oriental-gold);
+  color: var(--text-pure-black) !important;
+}
+
+.footer-link-item {
+  color: var(--text-pure-black) !important;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: all 0.22s ease;
+  display: inline-block;
+}
+
+.footer-link-item:hover {
+  transform: translateX(5px);
+  color: var(--oriental-red) !important;
+}
+
+/* --------------------------------------------------------------------------
+   14. RESPONSIVE WEB DESIGN (COMPREHENSIVE RWD BREAKPOINTS TREN 2026)
+   -------------------------------------------------------------------------- */
+/* Large Tablet & Small Laptop (max 991.98px) */
+@media (max-width: 991.98px) {
+  .main-navbar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .biodata-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .biodata-val {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .content-card-box {
+    padding: clamp(18px, 3.5vw, 28px);
+  }
+
+  .timeline-step-luxury:hover {
+    transform: none;
+    /* Sentuhan HP lebih natural tanpa translateX */
+  }
+}
+
+/* Tablet & Large Smartphone (max 767.98px) */
+@media (max-width: 767.98px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.8rem, 5.5vw, 2.35rem);
+  }
+
+  .section-headline {
+    font-size: clamp(1.5rem, 4.5vw, 1.85rem);
+  }
+
+  .avatar-halo {
+    width: 92px;
+    height: 92px;
+  }
+
+  .avatar-inner {
+    font-size: 1.7rem;
+  }
+
+  .custom-demographic-table th,
+  .custom-demographic-table td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .heritage-visual-top {
+    padding: 24px 16px;
+  }
+
+  .heritage-emoji-icon {
+    font-size: 2.5rem;
+  }
+
+  .manifesto-panel {
+    padding: 20px 18px;
+  }
+}
+
+/* Small Smartphone (max 575.98px) */
+@media (max-width: 575.98px) {
+  .hero-wrapper {
+    padding: 45px 12px 42px;
+  }
+
+  .hero-pill-badge {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-main-title {
+    font-size: 1.68rem;
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .btn-cta-gold,
+  .btn-cta-outline-gold {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+  }
+
+  .medal-card-luxury {
+    padding: 20px 14px;
+  }
+
+  .medal-card-luxury .fs-1 {
+    font-size: 2.2rem !important;
+  }
+
+  .project-card-header,
+  .food-card-header-luxury {
+    padding: 14px 16px;
+  }
+
+  .ornament-divider::before,
+  .ornament-divider::after {
+    width: 45px;
+  }
+}
+
+/* Ultra-Compact / Foldable Smartphone (max 375px) */
+@media (max-width: 375px) {
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .nav-chip {
+    padding: 5px 12px;
+    font-size: 0.72rem;
+  }
+
+  .section-headline {
+    font-size: 1.35rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. ACCESSIBILITY & PRINT STYLES
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+
+  .top-bar-custom,
+  .main-navbar,
+  .footer-luxury,
+  .btn-cta-gold,
+  .btn-cta-outline-gold {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .content-card-box,
+  .profile-card-sticky,
+  .timeline-step-luxury {
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+  }
+}
