@@ -1,0 +1,1411 @@
+/* ==========================================================================
+   STYLE.CSS
+   Website: Sejarah Cina Lasem & Portofolio Habib Muzakki Piliang
+   Teknologi: CSS3 murni + Bootstrap 5 (tanpa JavaScript, tanpa Tailwind)
+   
+   PANDUAN UNTUK PEMULA:
+   - Variabel warna ada di bagian 1 (Root Variables)
+   - Ganti nilai warna di sana untuk ubah warna seluruh website
+   - Setiap bagian diberi komentar agar mudah ditemukan
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. ROOT VARIABLES — WARNA & FONT DASAR
+   Ganti nilai di sini untuk mengubah tema warna keseluruhan website
+   ========================================================================== */
+
+:root {
+  /* Warna Utama Khas Lasem */
+  --merah: #801313;
+  /* Merah bata "getih pitik" Lasem */
+  --merah-tua: #4a0909;
+  /* Merah gelap untuk background header */
+  --merah-muda: #a31c1c;
+  /* Merah lebih terang untuk hover */
+  --emas: #d4af37;
+  /* Emas mewah khas ornamen Tiongkok */
+  --emas-muda: #f3e5ab;
+  /* Emas pucat untuk teks di atas gelap */
+  --emas-hover: #b89728;
+  /* Warna emas saat hover */
+
+  /* Warna Latar & Teks */
+  --bg-gelap: #1c1815;
+  /* Hitam kayu jati tua untuk header/footer */
+  --bg-kertas: #fbf9f5;
+  /* Krem kertas antik untuk body */
+  --teks-utama: #2d3748;
+  /* Abu gelap nyaman dibaca */
+  --teks-muted: #718096;
+  /* Abu muda untuk teks sekunder */
+
+  /* Font */
+  --font-isi: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-judul: 'Playfair Display', Georgia, serif;
+
+  /* Efek Transisi Halus */
+  --transisi: all 0.3s ease;
+
+  /* Bayangan Kartu */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================================================
+   2. RESET & PENGATURAN DASAR
+   ========================================================================== */
+
+html {
+  /* Scroll halus saat klik link navigasi */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-isi);
+  color: var(--teks-utama);
+  background-color: var(--bg-kertas);
+  line-height: 1.75;
+  overflow-x: hidden;
+  /* cegah scroll horizontal */
+}
+
+/* Judul menggunakan font serif elegan */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-judul);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Gambar responsif otomatis */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   3. HEADER & NAVIGASI
+   ========================================================================== */
+
+/* Baris atas kecil — pengumuman */
+.top-bar {
+  background: linear-gradient(90deg, #380707, #721212, #380707);
+  color: var(--emas-muda);
+  font-size: 0.8rem;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Navigasi utama */
+.main-navbar {
+  background-color: var(--bg-gelap);
+  border-bottom: 2px solid var(--emas);
+  padding: 12px 0;
+}
+
+/* Logo / nama brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  font-family: var(--font-judul);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Tombol navigasi (layar besar) */
+.nav-pill {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 50px;
+  transition: var(--transisi);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-pill:hover {
+  background-color: var(--merah);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Ikon navigasi (layar kecil/HP) */
+.nav-pill-sm {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: var(--transisi);
+}
+
+.nav-pill-sm:hover {
+  background-color: var(--merah);
+  color: #ffffff;
+}
+
+
+/* ==========================================================================
+   4. HERO SECTION — Spanduk Utama
+   ========================================================================== */
+
+.hero-section {
+  background:
+    linear-gradient(135deg, rgba(28, 24, 21, 0.95), rgba(74, 9, 9, 0.9)),
+    radial-gradient(circle at 75% 25%, rgba(212, 175, 55, 0.2), transparent 60%);
+  border-bottom: 4px solid var(--emas);
+  padding: 80px 0;
+}
+
+/* Responsif: kurangi padding di HP */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 0;
+  }
+}
+
+/* Label kecil di atas judul */
+.hero-label {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50px;
+  color: var(--emas-muda);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Judul besar hero */
+.hero-title {
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  line-height: 1.25;
+  font-family: var(--font-judul);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Teks emas bergradien di dalam judul */
+.hero-title-gold {
+  display: block;
+  background: linear-gradient(90deg, #fce08a, var(--emas), #fce08a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 6px;
+}
+
+/* Deskripsi singkat hero */
+.hero-desc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 300;
+  max-width: 750px;
+}
+
+/* Tombol-tombol hero */
+.btn-hero-gold {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--emas);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transisi);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-hero-gold:hover {
+  background-color: var(--emas-hover);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-hero-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: var(--transisi);
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.btn-hero-red {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--merah);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: var(--transisi);
+}
+
+.btn-hero-red:hover {
+  background-color: var(--merah-muda);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+/* ==========================================================================
+   5. SECTION — BAGIAN-BAGIAN HALAMAN
+   ========================================================================== */
+
+/* Jarak atas bawah setiap bagian */
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* Judul tiap bagian */
+.section-title h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--teks-utama);
+}
+
+/* Label kecil di atas judul bagian */
+.label-tag {
+  display: inline-block;
+  color: var(--merah);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Garis dekorasi bawah judul */
+.title-line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--emas);
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* Warna utilitas */
+.text-gold-var {
+  color: var(--emas) !important;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--merah), var(--emas));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* ==========================================================================
+   6. KARTU PROFIL HABIB MUZAKKI PILIANG
+   ========================================================================== */
+
+.card-profile {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+/* Banner merah atas kartu profil */
+.profile-banner {
+  background: linear-gradient(135deg, var(--merah-tua), var(--merah));
+}
+
+/* Lingkaran inisial avatar */
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--emas), #fff9e0);
+  color: var(--merah-tua);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-judul);
+  font-size: 1.8rem;
+  font-weight: 800;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Warna teks emas lembut di banner */
+.text-gold-soft {
+  color: var(--emas-muda);
+}
+
+/* Daftar informasi profil */
+.profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.profile-list li:last-child {
+  border-bottom: none;
+}
+
+/* Warna ikon di profil */
+.icon-gold {
+  color: var(--emas);
+  flex-shrink: 0;
+}
+
+.icon-red {
+  color: #dc3545;
+  flex-shrink: 0;
+}
+
+.icon-blue {
+  color: #0d6efd;
+  flex-shrink: 0;
+}
+
+.icon-green {
+  color: #198754;
+  flex-shrink: 0;
+}
+
+/* Tombol tautan profil */
+.btn-profile-dark {
+  display: block;
+  padding: 10px 16px;
+  background: #212529;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transisi);
+}
+
+.btn-profile-dark:hover {
+  background: #333;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-profile-blue {
+  display: block;
+  padding: 10px 16px;
+  background: #0077b5;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transisi);
+}
+
+.btn-profile-blue:hover {
+  background: #005f94;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-profile-outline {
+  display: block;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--teks-utama);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transisi);
+}
+
+.btn-profile-outline:hover {
+  border-color: var(--merah);
+  color: var(--merah);
+  transform: translateY(-2px);
+}
+
+/* Kotak statistik angka */
+.stat-card {
+  background: #fdfdfd;
+  transition: var(--transisi);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--emas) !important;
+}
+
+.stat-number {
+  font-family: var(--font-judul);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--merah);
+}
+
+.stat-gold {
+  color: #b8860b !important;
+}
+
+.stat-green {
+  color: #198754 !important;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--teks-muted);
+  font-weight: 600;
+}
+
+/* Daftar prestasi */
+.prestasi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prestasi-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Kartu proyek kecil */
+.proyek-card {
+  transition: var(--transisi);
+}
+
+.proyek-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ==========================================================================
+   7. KOTAK INFO & FAKTA (Bagian Pengenalan Lasem)
+   ========================================================================== */
+
+/* Kotak kecil bergaya di bawah deskripsi */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: var(--transisi);
+}
+
+.info-box:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--emas);
+}
+
+/* Kotak fakta unik (panel kanan) */
+.fakta-box {
+  background: var(--merah);
+  border-radius: 1rem;
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Daftar fakta di dalam panel */
+.fakta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fakta-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.fakta-list li strong {
+  color: #ffffff;
+}
+
+
+/* ==========================================================================
+   8. KARTU LINIMASA SEJARAH
+   ========================================================================== */
+
+.timeline-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--merah);
+  transition: var(--transisi);
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Kartu linimasa spesial (emas) */
+.timeline-card--gold {
+  border-top-color: var(--emas);
+  background: #fffdf2;
+}
+
+/* Badge tahun */
+.tl-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f1ede8;
+  color: var(--merah-tua);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.tl-badge--gold {
+  background: var(--emas);
+  color: #1a1a1a;
+}
+
+
+/* ==========================================================================
+   9. KARTU KAWASAN / KAMPUNG PECINAN
+   ========================================================================== */
+
+.kawasan-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 3px solid transparent;
+  transition: var(--transisi);
+}
+
+.kawasan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--merah);
+}
+
+.kawasan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nomor urut kawasan */
+.kawasan-no {
+  font-family: var(--font-judul);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--emas);
+}
+
+/* Badge kecil di kartu kawasan */
+.badge-kawasan {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(212, 175, 55, 0.15);
+  color: #7a5c00;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+/* Tag-tag kecil di bawah kartu kawasan */
+.kawasan-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.kawasan-tags span {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #f1f3f5;
+  color: var(--teks-muted);
+  font-size: 0.75rem;
+  border-radius: 50px;
+  border: 1px solid #dee2e6;
+}
+
+
+/* ==========================================================================
+   10. KARTU PENINGGALAN BERSEJARAH
+   ========================================================================== */
+
+.monument-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transisi);
+}
+
+.monument-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Header kartu peninggalan */
+.monument-header {
+  padding: 24px;
+  color: #ffffff;
+}
+
+.monument-header--red {
+  background: var(--merah);
+}
+
+.monument-header--dark {
+  background: #2d2d2d;
+}
+
+.monument-header--gold {
+  background: #7a5c00;
+}
+
+/* Badge tahun di dalam header */
+.badge-gold-sm {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--emas);
+  color: #1a1a1a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+/* Tag di bawah deskripsi peninggalan */
+.monument-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.monument-tags span {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #f1f3f5;
+  color: var(--teks-muted);
+  font-size: 0.75rem;
+  border-radius: 50px;
+  border: 1px solid #dee2e6;
+}
+
+
+/* ==========================================================================
+   11. BAGIAN AKULTURASI — BATIK & BUDAYA
+   ========================================================================== */
+
+/* Kotak penjelasan Batik Tiga Negeri */
+.batik-box {
+  background: #fafafa;
+}
+
+/* Satu langkah proses batik */
+.batik-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+/* Lingkaran warna di kiri langkah */
+.batik-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartu akulturasi kecil (arsitektur, bahasa, musik) */
+.akulturasi-item {
+  transition: var(--transisi);
+}
+
+.akulturasi-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ==========================================================================
+   12. KARTU KULINER HALAL
+   ========================================================================== */
+
+.food-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transisi);
+  border-left: 4px solid transparent;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--emas);
+}
+
+.food-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Badge "100% Halal" hijau */
+.halal-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #d1f5d7;
+  color: #155724;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 1px solid #c3e6cb;
+}
+
+/* Kotak catatan di bawah deskripsi kuliner */
+.food-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--teks-muted);
+}
+
+
+/* ==========================================================================
+   13. KARTU TOLERANSI
+   ========================================================================== */
+
+.toleransi-card {
+  background: #fdfdfd;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transisi);
+}
+
+.toleransi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Lingkaran ikon toleransi */
+.tolr-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Banner ikrar toleransi */
+.ikrar-banner {
+  background: linear-gradient(135deg, var(--merah-tua), var(--merah));
+}
+
+/* Badge di dalam banner */
+.ikrar-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--emas);
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+.ikrar-badge-light {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* ==========================================================================
+   14. RANGKUMAN & KESIMPULAN
+   ========================================================================== */
+
+/* Daftar bernomor rangkuman */
+.rangkuman-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--teks-utama);
+  padding-left: 20px;
+}
+
+.rangkuman-list li {
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.rangkuman-list li strong {
+  color: var(--merah);
+}
+
+
+/* ==========================================================================
+   15. FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--bg-gelap);
+  color: #ffffff;
+  padding: 60px 0 30px;
+}
+
+/* Daftar tautan di footer */
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav li a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: var(--transisi);
+}
+
+.footer-nav li a:hover {
+  color: var(--emas);
+}
+
+
+/* ==========================================================================
+   16. RESPONSIF — PENYESUAIAN LENGKAP SEMUA UKURAN LAYAR
+   
+   Urutan breakpoint (dari besar ke kecil):
+   - Layar lebar / Desktop besar : > 1200px   (xl)
+   - Desktop / Laptop             : 992–1199px (lg)
+   - Tablet landscape             : 768–991px  (md)
+   - Tablet portrait / HP besar  : 576–767px  (sm)
+   - HP kecil                     : < 576px    (xs)
+   ========================================================================== */
+
+
+/* ------------------------------------------------------------------
+   DESKTOP BESAR (> 1200px)
+   Tambah padding & ukuran font untuk layar lebar
+   ------------------------------------------------------------------ */
+@media (min-width: 1200px) {
+  .hero-section {
+    padding: 100px 0;
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+
+  .hero-title {
+    font-size: 3.4rem;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   TABLET LANDSCAPE & LAPTOP KECIL (992px – 1199px)
+   Penyesuaian ringan, layout masih 2 kolom
+   ------------------------------------------------------------------ */
+@media (max-width: 1199px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .fakta-box {
+    padding: 28px;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   TABLET PORTRAIT (768px – 991px)
+   - Kolom profil jadi lebar penuh (stacked)
+   - Kartu linimasa jadi 2 kolom
+   - Fakta box lebih rapat
+   ------------------------------------------------------------------ */
+@media (max-width: 991px) {
+  /* Hero */
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  /* Navigasi: sembunyikan teks, tampilkan ikon saja di tablet */
+  .nav-pill {
+    font-size: 0.82rem;
+    padding: 5px 10px;
+  }
+
+  /* Fakta box: kurangi padding agar tidak terlalu besar */
+  .fakta-box {
+    padding: 24px;
+    margin-top: 32px; /* jarak saat berubah jadi stacked */
+  }
+
+  /* Profil: foto avatar lebih kecil sedikit */
+  .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 1.6rem;
+  }
+
+  /* Kartu kawasan: kurangi padding */
+  .kawasan-card {
+    padding: 20px;
+  }
+
+  /* Statistik: angka lebih kecil */
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  /* Section padding */
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Section title */
+  .section-title h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Footer: kolom brand jadi lebar penuh */
+  .site-footer .col-lg-5 {
+    margin-bottom: 8px;
+  }
+
+  /* Ikrar banner: kurangi padding */
+  .ikrar-banner {
+    padding: 32px 24px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   TABLET PORTRAIT BAWAH & HP BESAR (576px – 767px)
+   - Layout tetap 2 kolom untuk kartu-kartu
+   - Font sedikit lebih kecil
+   ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero-section {
+    padding: 50px 0;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+
+  /* Tombol hero: stack vertikal */
+  .d-flex.flex-wrap.justify-content-center.gap-3 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-hero-gold,
+  .btn-hero-outline,
+  .btn-hero-red {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Section */
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Profil */
+  .profile-banner {
+    padding: 28px 20px;
+  }
+
+  .avatar {
+    width: 75px;
+    height: 75px;
+    font-size: 1.5rem;
+  }
+
+  /* Statistik angka */
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* Fakta box */
+  .fakta-box {
+    padding: 20px;
+  }
+
+  /* Kartu kawasan: nomor lebih kecil */
+  .kawasan-no {
+    font-size: 1.5rem;
+  }
+
+  /* Navigasi HP kecil-sedang */
+  .nav-pill-sm {
+    font-size: 0.95rem;
+    padding: 4px 8px;
+  }
+
+  /* Logo text lebih kecil */
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 40px 0 24px;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   HP KECIL (< 576px)
+   - Layout SEMUA jadi 1 kolom
+   - Font lebih kecil & rapat
+   - Padding dikurangi agar konten tidak terpotong
+   ------------------------------------------------------------------ */
+@media (max-width: 575px) {
+  /* Hero */
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .hero-title-gold {
+    font-size: 1.45rem;
+  }
+
+  .hero-label {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+  }
+
+  /* Tombol hero */
+  .btn-hero-gold,
+  .btn-hero-outline,
+  .btn-hero-red {
+    width: 100%;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Section */
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.45rem;
+  }
+
+  .section-title p {
+    font-size: 0.9rem;
+  }
+
+  /* Header & Navigasi */
+  .top-bar {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  .logo-icon {
+    font-size: 1.4rem;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-pill-sm {
+    font-size: 0.85rem;
+    padding: 4px 7px;
+  }
+
+  /* Profil */
+  .profile-banner {
+    padding: 24px 16px;
+  }
+
+  .avatar {
+    width: 68px;
+    height: 68px;
+    font-size: 1.3rem;
+  }
+
+  .profile-banner h3 {
+    font-size: 1.1rem;
+  }
+
+  .profile-list li {
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+
+  /* Statistik */
+  .stat-number {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+
+  /* Kartu-kartu */
+  .timeline-card,
+  .kawasan-card {
+    padding: 18px;
+  }
+
+  .kawasan-no {
+    font-size: 1.3rem;
+  }
+
+  .kawasan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Fakta box */
+  .fakta-box {
+    padding: 18px;
+  }
+
+  .fakta-list li {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  /* Info box */
+  .info-box {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  /* Food card */
+  .food-card {
+    border-left-width: 3px;
+  }
+
+  .food-note {
+    font-size: 0.8rem;
+  }
+
+  /* Monument header */
+  .monument-header {
+    padding: 18px;
+  }
+
+  /* Toleransi card */
+  .tolr-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Banner ikrar */
+  .ikrar-banner {
+    padding: 28px 16px !important;
+  }
+
+  .ikrar-banner h3 {
+    font-size: 1.3rem;
+  }
+
+  .ikrar-banner .lead {
+    font-size: 0.9rem;
+  }
+
+  .ikrar-badge,
+  .ikrar-badge-light {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+  }
+
+  /* Rangkuman */
+  .rangkuman-list {
+    padding-left: 16px;
+    gap: 10px;
+  }
+
+  .rangkuman-list li {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 36px 0 20px;
+  }
+
+  .footer-nav li a {
+    font-size: 0.82rem;
+  }
+
+  /* Tombol profil */
+  .btn-profile-dark,
+  .btn-profile-blue,
+  .btn-profile-outline {
+    font-size: 0.85rem;
+    padding: 9px 12px;
+  }
+
+  /* Proyek card */
+  .proyek-card {
+    padding: 10px !important;
+  }
+
+  /* Batik box */
+  .batik-step {
+    gap: 10px;
+  }
+
+  /* Akulturasi item */
+  .akulturasi-item {
+    padding: 16px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   HP SANGAT KECIL (< 360px)
+   Penyesuaian minimum untuk layar HP lama
+   ------------------------------------------------------------------ */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-title-gold {
+    font-size: 1.25rem;
+  }
+
+  .logo-text {
+    display: none; /* cukup tampilkan ikon logo saja */
+  }
+
+  .nav-pill-sm {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
+  .section-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+}
